@@ -19,28 +19,29 @@ if (docSnap.exists()) {
 
 function SingleRecipies() {
     const data = useLoaderData()
+    console.log(data)
     
   return (
     <div>
       {data && (
         <div>
-          {recipie && (
+          {data && (
             <div>
               <img
-                src={recipie.image}
+                src={data.image}
                 alt=""
                 className="w-full h-96 rounded object-cover mb-5"
               />
-              <h1 className="mb-5"> Nomi: {recipie.title}</h1>
+              <h1 className="mb-5"> Nomi: {data.title}</h1>
               <p className="flex gap-5 mb-5">
                 {" "}
                 Mahsulotlar:
-                {recipie.ingredients.map((item) => {
+                {data.ingredients.map((item) => {
                   return <span key={item}>{item}</span>;
                 })}
               </p>
-              <p className="mb-5"> Vaqt: {recipie.cookingTime}</p>
-              <p>{recipie.method}</p>
+              <p className="mb-5"> Vaqt: {data.cookingTime}</p>
+              <p>{data.method}</p>
             </div>
           )}
         </div>
