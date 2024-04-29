@@ -3,7 +3,7 @@ import { ImGoogle } from "react-icons/im";
 import { Link, Form, useActionData } from "react-router-dom";
 
 import FormInput from "../FormInput";
-import useLogin from "../hooks/useLOgin";
+import useLogin from "../hooks/useLogin";
 import { useEffect } from "react";
 
 export const action = async ({request}) => {
